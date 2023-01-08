@@ -1,0 +1,14 @@
+.App-end .flex {
+    display: flex;
+    justify-content: space-between;
+}
+.App-end .flex input {
+    width: 100px;
+}
+.App-end .flex li {
+    list-style: none;
+}
+.App-end .flex ul {
+    margin: 0;
+    padding: 0;
+}
