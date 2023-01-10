@@ -12,7 +12,7 @@ const Example = () => {
       <ul>
         {animals
           .filter(animal => {
-            const isMatch = animal.indexOf(filterVal) !==-1;
+            const isMatch = animal.indexOf("") !==-1;
             console.log(animal.indexOf(filterVal))
             return isMatch
           })
