@@ -17,23 +17,24 @@ const Todo = () => {
       content: "郵便出す",
     },
   ];
-  const [ lists, setList ] = useState(todoLists);
+
+  const [lists, setList] = useState(todoLists);
 
   const deleteList = (id) => {
     const newLists = lists.filter((list) => {
       return list.id !== id;
-    })
+    });
     setList(newLists);
-  }
+  };
 
-  const createList = (list) => {
-    setList([...lists, list])
-  }
+  const createTodo = (todo) => {
+    setList([...lists, todo]);
+  };
 
   return (
     <>
-      <List lists={lists} deleteList={deleteList}/>
-      <Form createList={createList}/>
+      <List todoLists={lists} deleteList={deleteList} />
+      <Form createTodo={createTodo} />
     </>
   );
 };
