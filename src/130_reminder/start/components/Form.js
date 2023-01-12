@@ -4,7 +4,6 @@ const Form = ({ createList }) => {
   const [enteredTodo, setEnteredTodo] = useState("");
   const addTodo = (e) => {
     e.preventDefault();
-    
     const newList = {
       id: Math.floor(Math.random() * 1e5),
       content: enteredTodo,
