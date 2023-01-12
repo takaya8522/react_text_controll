@@ -1,5 +1,9 @@
+import { useState } from "react";
+import List from "./List";
+import Form from "./Form";
+
 const Todo = () => {
-  const todosList = [
+  const todoLists = [
     {
       id: 1,
       content: "店予約する",
@@ -13,4 +17,14 @@ const Todo = () => {
       content: "郵便出す",
     },
   ];
+  const [ lists, setList ] = useState(todoLists);
+
+  return (
+    <>
+      <List lists={lists}/>
+      <Form />
+    </>
+  );
 };
+
+export default Todo;
